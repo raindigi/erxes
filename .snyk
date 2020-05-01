@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:chownr:20180731':
@@ -111,4 +111,14 @@ ignore:
     - sanitize-html > lodash.mergewith:
         reason: None given
         expires: '2019-08-08T03:49:55.608Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - react-color > lodash:
+        patched: '2020-05-01T02:56:51.075Z'
+    - react-color > reactcss > lodash:
+        patched: '2020-05-01T02:56:51.075Z'
+    - juice > web-resource-inliner > async > lodash:
+        patched: '2020-05-01T02:56:51.075Z'
+    - emotion > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-01T02:56:51.075Z'
